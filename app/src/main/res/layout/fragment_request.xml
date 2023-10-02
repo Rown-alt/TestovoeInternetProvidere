@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusableInTouchMode="true"
+    android:background="@color/app_bg">
+
+    <View
+        android:id="@+id/form_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="-15dp"
+        android:layout_marginBottom="-15dp"
+        android:layout_marginStart="-15dp"
+        android:layout_marginEnd="-15dp"
+        android:background="@drawable/form_bg"
+        app:layout_constraintTop_toTopOf="@id/street_et"
+        app:layout_constraintStart_toStartOf="@id/street_et"
+        app:layout_constraintEnd_toEndOf="@id/street_et"
+        app:layout_constraintBottom_toBottomOf="@id/flat"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/back_press"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="25dp"
+        android:background="@drawable/back_press"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        style="@style/page_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:text="@string/request_text"
+        app:layout_constraintStart_toEndOf="@id/back_press"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/back_press"
+        app:layout_constraintBottom_toBottomOf="@id/back_press"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/street_et"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:paddingHorizontal="5dp"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:completionThreshold="3"
+        android:hint="@string/choose_street"
+        android:textColorHint="#ACACAC"
+        android:inputType="textNoSuggestions"
+        android:dropDownHeight="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/back_press"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/house_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/street_et"
+        app:layout_constraintStart_toStartOf="@id/street_et"
+        app:layout_constraintEnd_toEndOf="@id/street_et"/>
+
+    <EditText
+        android:id="@+id/house"
+        style="@style/window_form"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+
+        android:hint="@string/house"
+        app:layout_constraintTop_toBottomOf="@id/house_spinner"
+        app:layout_constraintStart_toStartOf="@id/street_et"
+        app:layout_constraintEnd_toStartOf="@id/building"/>
+
+    <EditText
+        android:id="@+id/building"
+        style="@style/window_form"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/building"
+        app:layout_constraintTop_toBottomOf="@id/house_spinner"
+        app:layout_constraintStart_toEndOf="@id/house"
+        app:layout_constraintEnd_toStartOf="@id/flat"/>
+
+    <EditText
+        android:id="@+id/flat"
+        style="@style/window_form"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/flat"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/house_spinner"
+        app:layout_constraintStart_toEndOf="@id/building"
+        app:layout_constraintEnd_toEndOf="@id/street_et"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/send_btn"
+        style="@style/send_btn"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/send"
+        app:layout_constraintTop_toBottomOf="@id/form_bg"
+        app:layout_constraintStart_toStartOf="@id/form_bg"
+        app:layout_constraintEnd_toEndOf="@id/form_bg"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

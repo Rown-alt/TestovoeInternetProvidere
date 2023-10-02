@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TestovoeInternetProvidere</string>
+    <string name="request_text">Заявка на подключение</string>
+    <string name="house">Дом</string>
+    <string name="building">Корпус</string>
+    <string name="flat">Квартира</string>
+    <string name="send">Отправить</string>
+    <string name="choose_street">Выберите улицу</string>
+    <string name="choose_house">Выберите дом</string>
+</resources>

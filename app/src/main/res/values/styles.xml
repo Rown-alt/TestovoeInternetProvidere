@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="page_header">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/golos_text</item>
+    </style>
+    <style name="window_form" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/black</item>
+        <item name="hintTextColor">#ACACAC</item>
+        <item name="android:background">@drawable/small_window_bg</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="fontFamily">@font/golos_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingHorizontal">15dp</item>
+    </style>
+    <style name="send_btn">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/send_btn_bg</item>
+        <item name="android:text">@string/send</item>
+        <item name="fontFamily">@font/golos_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>
