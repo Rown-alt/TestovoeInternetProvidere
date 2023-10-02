@@ -203,6 +203,7 @@ class RequestFragment: Fragment() {
             Toast.makeText(requireContext(), "Введите номер квартиры", Toast.LENGTH_SHORT).show()
         }
     }
+    
     private fun showSecondType(streetId: String, houseNumber: String, building: String, flat: String){
         if (flat != "" && houseNumber!= ""){
             Toast.makeText(requireContext(), "ID улицы: $streetId, дом: $houseNumber, корпус: $building, квартира: $flat", Toast.LENGTH_SHORT).show()
@@ -216,6 +217,7 @@ class RequestFragment: Fragment() {
             }
         }
     }
+
     private fun showThirdType(streetName: String, houseNumber: String, building: String, flat: String){
         if (flat != "" && houseNumber!= "" && streetName != ""){
             Toast.makeText(requireContext(), "улица: $streetName, дом: $houseNumber, корпус: $building, квартира: $flat", Toast.LENGTH_SHORT).show()
@@ -230,7 +232,7 @@ class RequestFragment: Fragment() {
             else{
                 Toast.makeText(requireContext(), "Введите номер квартиры", Toast.LENGTH_SHORT).show()
             }
-
+            
         }
     }
 }
